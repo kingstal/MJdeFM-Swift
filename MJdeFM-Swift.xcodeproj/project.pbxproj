@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0AB0CFC7214CB3BA72E8F4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5865BF537B1AC00FC9A57197 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8EC748CB1B75D8B600015E5E /* MJFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC748CA1B75D8B600015E5E /* MJFetcher.swift */; };
+		8EC748CE1B76046A00015E5E /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC748CD1B76046A00015E5E /* UIImageExtension.swift */; };
 		8EE811DB1B73AB8F00D65BEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE811DA1B73AB8F00D65BEF /* AppDelegate.swift */; };
-		8EE811DD1B73AB8F00D65BEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE811DC1B73AB8F00D65BEF /* ViewController.swift */; };
+		8EE811DD1B73AB8F00D65BEF /* MJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE811DC1B73AB8F00D65BEF /* MJTabBarController.swift */; };
 		8EE811E01B73AB8F00D65BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE811DE1B73AB8F00D65BEF /* Main.storyboard */; };
 		8EE811E21B73AB8F00D65BEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE811E11B73AB8F00D65BEF /* Images.xcassets */; };
-		8EE811E51B73AB8F00D65BEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE811E31B73AB8F00D65BEF /* LaunchScreen.xib */; };
 		8EE811F11B73AB9000D65BEF /* MJdeFM_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE811F01B73AB9000D65BEF /* MJdeFM_SwiftTests.swift */; };
+		8EE812081B73AD1200D65BEF /* ContextMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE812001B73AD1200D65BEF /* ContextMenuCell.m */; };
+		8EE812091B73AD1200D65BEF /* ContextMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE812011B73AD1200D65BEF /* ContextMenuCell.xib */; };
+		8EE8120A1B73AD1200D65BEF /* UIView+YALConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE812041B73AD1200D65BEF /* UIView+YALConstraints.m */; };
+		8EE8120B1B73AD1200D65BEF /* YALContextMenuTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE812071B73AD1200D65BEF /* YALContextMenuTableView.m */; };
+		8EE812121B74C7D300D65BEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE812111B74C7D300D65BEF /* LaunchScreen.xib */; };
+		8EE812141B74C82100D65BEF /* MJPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE812131B74C82100D65BEF /* MJPlayerViewController.swift */; };
+		8EE812161B74CDBD00D65BEF /* MJSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE812151B74CDBD00D65BEF /* MJSong.swift */; };
+		8EE812181B74D53800D65BEF /* MJChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE812171B74D53800D65BEF /* MJChannel.swift */; };
+		8EE8121A1B74D75300D65BEF /* MJUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE812191B74D75300D65BEF /* MJUserInfo.swift */; };
+		8EE8121C1B74DFFA00D65BEF /* MJUserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8121B1B74DFFA00D65BEF /* MJUserInfoManager.swift */; };
+		8EE8121E1B74E69A00D65BEF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE8121D1B74E69A00D65BEF /* MediaPlayer.framework */; };
+		8EE812201B74EA7A00D65BEF /* MJChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8121F1B74EA7A00D65BEF /* MJChannelManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +40,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5865BF537B1AC00FC9A57197 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DAB308FF38BA7D5FBF42395 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8EC748CA1B75D8B600015E5E /* MJFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJFetcher.swift; sourceTree = "<group>"; };
+		8EC748CD1B76046A00015E5E /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		8EE811D51B73AB8F00D65BEF /* MJdeFM-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MJdeFM-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE811D91B73AB8F00D65BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EE811DA1B73AB8F00D65BEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8EE811DC1B73AB8F00D65BEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8EE811DC1B73AB8F00D65BEF /* MJTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJTabBarController.swift; sourceTree = "<group>"; };
 		8EE811DF1B73AB8F00D65BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EE811E11B73AB8F00D65BEF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8EE811E41B73AB8F00D65BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8EE811EA1B73AB9000D65BEF /* MJdeFM-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MJdeFM-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE811EF1B73AB9000D65BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EE811F01B73AB9000D65BEF /* MJdeFM_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJdeFM_SwiftTests.swift; sourceTree = "<group>"; };
+		8EE811FF1B73AD1200D65BEF /* ContextMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextMenuCell.h; sourceTree = "<group>"; };
+		8EE812001B73AD1200D65BEF /* ContextMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextMenuCell.m; sourceTree = "<group>"; };
+		8EE812011B73AD1200D65BEF /* ContextMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContextMenuCell.xib; sourceTree = "<group>"; };
+		8EE812031B73AD1200D65BEF /* UIView+YALConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YALConstraints.h"; sourceTree = "<group>"; };
+		8EE812041B73AD1200D65BEF /* UIView+YALConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YALConstraints.m"; sourceTree = "<group>"; };
+		8EE812051B73AD1200D65BEF /* YALContextMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YALContextMenuCell.h; sourceTree = "<group>"; };
+		8EE812061B73AD1200D65BEF /* YALContextMenuTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YALContextMenuTableView.h; sourceTree = "<group>"; };
+		8EE812071B73AD1200D65BEF /* YALContextMenuTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YALContextMenuTableView.m; sourceTree = "<group>"; };
+		8EE8120C1B73AF5C00D65BEF /* MJdeFM-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MJdeFM-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		8EE812111B74C7D300D65BEF /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		8EE812131B74C82100D65BEF /* MJPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJPlayerViewController.swift; sourceTree = "<group>"; };
+		8EE812151B74CDBD00D65BEF /* MJSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJSong.swift; sourceTree = "<group>"; };
+		8EE812171B74D53800D65BEF /* MJChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJChannel.swift; sourceTree = "<group>"; };
+		8EE812191B74D75300D65BEF /* MJUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJUserInfo.swift; sourceTree = "<group>"; };
+		8EE8121B1B74DFFA00D65BEF /* MJUserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJUserInfoManager.swift; sourceTree = "<group>"; };
+		8EE8121D1B74E69A00D65BEF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		8EE8121F1B74EA7A00D65BEF /* MJChannelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJChannelManager.swift; sourceTree = "<group>"; };
+		AFFE07AD7B3EAC5ECC9EB303 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE8121E1B74E69A00D65BEF /* MediaPlayer.framework in Frameworks */,
+				0B0AB0CFC7214CB3BA72E8F4 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +93,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EC748CC1B76044B00015E5E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8EC748CD1B76046A00015E5E /* UIImageExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		8EE811CC1B73AB8F00D65BEF = {
 			isa = PBXGroup;
 			children = (
 				8EE811D71B73AB8F00D65BEF /* MJdeFM-Swift */,
 				8EE811ED1B73AB9000D65BEF /* MJdeFM-SwiftTests */,
 				8EE811D61B73AB8F00D65BEF /* Products */,
+				9624BF09CBCF6A0D32F62EDD /* Pods */,
+				D7CF4E52539974E3BE3210FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,11 +124,16 @@
 		8EE811D71B73AB8F00D65BEF /* MJdeFM-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				8EE8120C1B73AF5C00D65BEF /* MJdeFM-Swift-Bridging-Header.h */,
 				8EE811DA1B73AB8F00D65BEF /* AppDelegate.swift */,
-				8EE811DC1B73AB8F00D65BEF /* ViewController.swift */,
 				8EE811DE1B73AB8F00D65BEF /* Main.storyboard */,
+				8EE812111B74C7D300D65BEF /* LaunchScreen.xib */,
+				8EE811FA1B73ABB900D65BEF /* Models */,
+				8EE811FB1B73ABC700D65BEF /* Views */,
+				8EE811FC1B73ABD000D65BEF /* View Controllers */,
+				8EE811FD1B73ABE000D65BEF /* Services */,
+				8EC748CC1B76044B00015E5E /* Extension */,
 				8EE811E11B73AB8F00D65BEF /* Images.xcassets */,
-				8EE811E31B73AB8F00D65BEF /* LaunchScreen.xib */,
 				8EE811D81B73AB8F00D65BEF /* Supporting Files */,
 			);
 			path = "MJdeFM-Swift";
@@ -112,6 +164,84 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8EE811FA1B73ABB900D65BEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8EE812151B74CDBD00D65BEF /* MJSong.swift */,
+				8EE812171B74D53800D65BEF /* MJChannel.swift */,
+				8EE8121F1B74EA7A00D65BEF /* MJChannelManager.swift */,
+				8EE812191B74D75300D65BEF /* MJUserInfo.swift */,
+				8EE8121B1B74DFFA00D65BEF /* MJUserInfoManager.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8EE811FB1B73ABC700D65BEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EE811FE1B73AD1200D65BEF /* ContextMenuCell */,
+				8EE812021B73AD1200D65BEF /* YALContextMenu */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8EE811FC1B73ABD000D65BEF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8EE811DC1B73AB8F00D65BEF /* MJTabBarController.swift */,
+				8EE812131B74C82100D65BEF /* MJPlayerViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8EE811FD1B73ABE000D65BEF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8EC748CA1B75D8B600015E5E /* MJFetcher.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		8EE811FE1B73AD1200D65BEF /* ContextMenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				8EE811FF1B73AD1200D65BEF /* ContextMenuCell.h */,
+				8EE812001B73AD1200D65BEF /* ContextMenuCell.m */,
+				8EE812011B73AD1200D65BEF /* ContextMenuCell.xib */,
+			);
+			path = ContextMenuCell;
+			sourceTree = "<group>";
+		};
+		8EE812021B73AD1200D65BEF /* YALContextMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8EE812031B73AD1200D65BEF /* UIView+YALConstraints.h */,
+				8EE812041B73AD1200D65BEF /* UIView+YALConstraints.m */,
+				8EE812051B73AD1200D65BEF /* YALContextMenuCell.h */,
+				8EE812061B73AD1200D65BEF /* YALContextMenuTableView.h */,
+				8EE812071B73AD1200D65BEF /* YALContextMenuTableView.m */,
+			);
+			path = YALContextMenu;
+			sourceTree = "<group>";
+		};
+		9624BF09CBCF6A0D32F62EDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFFE07AD7B3EAC5ECC9EB303 /* Pods.debug.xcconfig */,
+				7DAB308FF38BA7D5FBF42395 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D7CF4E52539974E3BE3210FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EE8121D1B74E69A00D65BEF /* MediaPlayer.framework */,
+				5865BF537B1AC00FC9A57197 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EE811F41B73AB9000D65BEF /* Build configuration list for PBXNativeTarget "MJdeFM-Swift" */;
 			buildPhases = (
+				FDAD5AD339E15422191D888F /* Check Pods Manifest.lock */,
 				8EE811D11B73AB8F00D65BEF /* Sources */,
 				8EE811D21B73AB8F00D65BEF /* Frameworks */,
 				8EE811D31B73AB8F00D65BEF /* Resources */,
+				258C6A58CAD55C6B9266E44C /* Embed Pods Frameworks */,
+				76AAC4C3663E26C3123FC74F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,8 +325,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE812121B74C7D300D65BEF /* LaunchScreen.xib in Resources */,
 				8EE811E01B73AB8F00D65BEF /* Main.storyboard in Resources */,
-				8EE811E51B73AB8F00D65BEF /* LaunchScreen.xib in Resources */,
+				8EE812091B73AD1200D65BEF /* ContextMenuCell.xib in Resources */,
 				8EE811E21B73AB8F00D65BEF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,13 +341,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		258C6A58CAD55C6B9266E44C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76AAC4C3663E26C3123FC74F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDAD5AD339E15422191D888F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8EE811D11B73AB8F00D65BEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EE811DD1B73AB8F00D65BEF /* ViewController.swift in Sources */,
+				8EE8120B1B73AD1200D65BEF /* YALContextMenuTableView.m in Sources */,
+				8EE8120A1B73AD1200D65BEF /* UIView+YALConstraints.m in Sources */,
+				8EE812181B74D53800D65BEF /* MJChannel.swift in Sources */,
+				8EE811DD1B73AB8F00D65BEF /* MJTabBarController.swift in Sources */,
+				8EE812161B74CDBD00D65BEF /* MJSong.swift in Sources */,
+				8EE812081B73AD1200D65BEF /* ContextMenuCell.m in Sources */,
+				8EC748CB1B75D8B600015E5E /* MJFetcher.swift in Sources */,
+				8EE812141B74C82100D65BEF /* MJPlayerViewController.swift in Sources */,
+				8EE812201B74EA7A00D65BEF /* MJChannelManager.swift in Sources */,
+				8EC748CE1B76046A00015E5E /* UIImageExtension.swift in Sources */,
+				8EE8121C1B74DFFA00D65BEF /* MJUserInfoManager.swift in Sources */,
 				8EE811DB1B73AB8F00D65BEF /* AppDelegate.swift in Sources */,
+				8EE8121A1B74D75300D65BEF /* MJUserInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,14 +435,6 @@
 				8EE811DF1B73AB8F00D65BEF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8EE811E31B73AB8F00D65BEF /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8EE811E41B73AB8F00D65BEF /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -340,21 +525,25 @@
 		};
 		8EE811F51B73AB9000D65BEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFFE07AD7B3EAC5ECC9EB303 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MJdeFM-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Arthur/Documents/Code/iOS-Demo/MJdeFM-Swift/MJdeFM-Swift/MJdeFM-Swift-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		8EE811F61B73AB9000D65BEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DAB308FF38BA7D5FBF42395 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MJdeFM-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Arthur/Documents/Code/iOS-Demo/MJdeFM-Swift/MJdeFM-Swift/MJdeFM-Swift-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +600,7 @@
 				8EE811F61B73AB9000D65BEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EE811F71B73AB9000D65BEF /* Build configuration list for PBXNativeTarget "MJdeFM-SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +609,7 @@
 				8EE811F91B73AB9000D65BEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
