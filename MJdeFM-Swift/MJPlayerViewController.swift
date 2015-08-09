@@ -9,6 +9,7 @@
 import Foundation
 import AVFoundation
 import MediaPlayer
+import MBProgressHUD
 
 
 class MJPlayerViewController : UIViewController
@@ -155,6 +156,17 @@ class MJPlayerViewController : UIViewController
         }
     }
     
+    func addHeartSongToUser(user : MJUserInfo, song : MJSong, action : String)
+    {
+        MJFetcher.sharedManager.addHeartSongToUser(user, song: song, action: action, successCompletion: {
+            (data) in
+                println("添加红心：\(action)")
+            }, errorCompletion: {
+            (error) in
+                println("\(error)")
+        })
+    }
+    
     // MARK: IBAction
     
     @IBAction func pauseBtnTapped() {
@@ -176,6 +188,30 @@ class MJPlayerViewController : UIViewController
     }
     
     @IBAction func likeBtnTapped() {
+        let user = MJUserInfoManager.sharedManager.userInfo
+        if user.cookies == ""
+        {
+            let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            hud.mode = MBProgressHUDMode.Text
+            hud.labelText = "还没有登录，赶紧登录哦！"
+            hud.margin = 10
+            hud.removeFromSuperViewOnHide = true
+            
+            hud.hide(true, afterDelay: 3)
+            return
+        }
+        
+        if playingSong?.like.toInt() == 0
+        {
+            playingSong?.like = "1"
+            likeBtn.setBackgroundImage(UIImage(named: "heart2"), forState: UIControlState.Normal)
+            self.addHeartSongToUser(user, song: playingSong!, action: "y")
+        }else
+        {
+            playingSong!.like = "0"
+            likeBtn.setBackgroundImage(UIImage(named: "heart1"), forState: UIControlState.Normal)
+            self.addHeartSongToUser(user, song: playingSong!, action: "n")
+        }
     }
     
     @IBAction func deleteBtnTapped(){

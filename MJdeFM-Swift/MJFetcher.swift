@@ -131,4 +131,22 @@ class MJFetcher
                 }
         }
     }
+    
+    func addHeartSongToUser(user : MJUserInfo, song : MJSong, action : String, successCompletion : MJFetcherSuccessBlock, errorCompletion : MJFetcherErrorBlock)
+    {
+        let parameters = [
+            "ck" : user.cookies,
+            "action" : action
+        ]
+        
+        Alamofire.request(.POST, String(format: MJFetcher.Constants.ADDHEARTSONGURL, song.sid), parameters : parameters)
+            .responseString { _, _, data, error in
+                if data != nil
+                {
+                    successCompletion(data: data!)
+                }else if error != nil{
+                    errorCompletion(error: error!)
+                }
+        }
+    }
 }

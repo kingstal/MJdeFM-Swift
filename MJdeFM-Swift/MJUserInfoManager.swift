@@ -16,7 +16,7 @@ class MJUserInfoManager
         return sharedInstance
     }
     
-    var userInfo : MJUserInfo?
+    var userInfo : MJUserInfo!
     {
         didSet{
             self.archiverUserInfo()
@@ -27,7 +27,7 @@ class MJUserInfoManager
     {
         var filePath = NSString.getDocumentPath()
         filePath = filePath.stringByAppendingPathComponent("userInfo.data")
-        NSKeyedArchiver.archiveRootObject(userInfo!, toFile: filePath)
+        NSKeyedArchiver.archiveRootObject(userInfo, toFile: filePath)
     }
     
     func unarchiverUserInfo() -> MJUserInfo

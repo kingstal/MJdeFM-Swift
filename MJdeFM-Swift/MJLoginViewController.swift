@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MBProgressHUD
 
 protocol MJLoginViewControllerDelegate : class {
     func loginViewControllerDidLoginSuccess(controller : MJLoginViewController, userInfo : MJUserInfo)
@@ -22,6 +23,8 @@ class MJLoginViewController: UIViewController {
     weak var delegate: MJLoginViewControllerDelegate?
     
     @IBAction func submitBtnTapped() {
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        
         let name = username.text
         let passwd = password.text
         let capt = captcha.text
@@ -33,9 +36,17 @@ class MJLoginViewController: UIViewController {
                 {
                     self.delegate?.loginViewControllerDidLoginSuccess(self, userInfo: userInfo)
                 }
+            dispatch_async(dispatch_get_main_queue(), {
+                ()in
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+            })
             }, errorCompletion: {
             (error) in
                  println("\(error)")
+                dispatch_async(dispatch_get_main_queue(), {
+                    ()in
+                    MBProgressHUD.hideHUDForView(self.view, animated: true)
+                })
             })
     }
     

@@ -14,7 +14,7 @@ class MJSong : NSObject
     let artist : String
     let picture : String
     let length : String
-    let like : String
+    var like : String
     let url : String
     let sid : String
 

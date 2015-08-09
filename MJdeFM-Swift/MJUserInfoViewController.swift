@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MBProgressHUD
 
 class MJUserInfoViewController : UIViewController
 {
@@ -24,14 +25,23 @@ class MJUserInfoViewController : UIViewController
     }
     
     @IBAction func logoutBtnTapped() {
-        //TODO: MBProgressHUD
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        
         MJFetcher.sharedManager.logoutUser(userInfo, successCompletion: {
             (data) in
                 self.userInfo = MJUserInfo()
                 MJUserInfoManager.sharedManager.userInfo = self.userInfo
+            dispatch_async(dispatch_get_main_queue(), {
+                ()in
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+            })
             }, errorCompletion: {
             (error) in
                 println("\(error)")
+                dispatch_async(dispatch_get_main_queue(), {
+                    ()in
+                    MBProgressHUD.hideHUDForView(self.view, animated: true)
+                })
         })
     }
     
