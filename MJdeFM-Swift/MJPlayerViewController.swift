@@ -37,7 +37,7 @@ class MJPlayerViewController : UIViewController
             songArtist.text = playingSong!.artist;
             channelTitle.text = MJChannelManager.sharedManager.currentChannel?.name
             picture.image = UIImage.loadImageWithUrl(playingSong!.picture)
-            if ((playingSong!.like.toInt()) != nil) {
+            if (playingSong!.like == "0") {
                 likeBtn.setBackgroundImage(UIImage(named: "heart1"), forState: UIControlState.Normal)
             } else {
                 likeBtn.setBackgroundImage(UIImage(named: "heart2"), forState: UIControlState.Normal)
@@ -88,6 +88,7 @@ class MJPlayerViewController : UIViewController
     {
         isPlaying = true
         picture.layer.cornerRadius = picture.bounds.size.width / 2.0
+        println("\(picture.layer.cornerRadius)")
         picture.layer.masksToBounds = true
         
         pictureBlock.setBackgroundImage(UIImage(named: "albumBlock"), forState: UIControlState.Normal)
@@ -125,8 +126,10 @@ class MJPlayerViewController : UIViewController
     
     func changeChannel(notification : NSNotification)
     {
-//        let channel = notification.userInfo["channel"] as! MJChannel
-        //TODO: 带完成
+        let userInfo = notification.userInfo as! Dictionary<String,MJChannel>
+        let channel = userInfo["channel"]
+        MJChannelManager.sharedManager.currentChannel = channel
+        self.loadPlayListWithType(MJPlayerViewController.Constants.GETSONGTLISTTYPE)
     }
     
     func updateProgress()

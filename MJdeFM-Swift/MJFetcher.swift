@@ -149,4 +149,17 @@ class MJFetcher
                 }
         }
     }
+    
+    func fetchChannelWithURL(url : String, successCompletion : MJFetcherSuccessBlock, errorCompletion : MJFetcherErrorBlock)
+    {
+        Alamofire.request(.GET, url)
+            .responseJSON { _, _, data, error in
+                if data != nil
+                {
+                    successCompletion(data: data!)
+                }else if error != nil{
+                    errorCompletion(error: error!)
+                }
+        }
+    }
 }

@@ -21,7 +21,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtK-bx-9hH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-358" y="-206"/>
+            <point key="canvasLocation" x="402" y="-258"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="go0-JC-HIF">
@@ -74,6 +74,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00/0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bZ-pq-7Nj" userLabel="timer">
                                 <rect key="frame" x="264" y="359" width="72.5" height="20.5"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="LAJ-jH-QSb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.85098039219999999" green="0.75143200089999995" blue="0.66369071960000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -81,6 +84,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kam-5Q-FlR" userLabel="title">
                                 <rect key="frame" x="271" y="387" width="57" height="26"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="alP-It-n9V"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" red="0.85098039219999999" green="0.75143200089999995" blue="0.66369071960000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -88,6 +94,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Oqw-B5-H2m">
                                 <rect key="frame" x="280" y="421" width="38.5" height="20.5"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="rDE-Ur-5nT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.85098039219999999" green="0.75143200089999995" blue="0.66369071960000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -200,6 +209,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lpH-o2-w2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-358" y="474"/>
+        </scene>
+        <!--Channel View Controller-->
+        <scene sceneID="9By-9j-gZe">
+            <objects>
+                <tableViewController storyboardIdentifier="MJChannelViewController" id="qfm-ia-Edb" customClass="MJChannelViewController" customModule="MJdeFM_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NMP-WS-qaz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="channelCell" textLabel="1sT-Bf-T7g" style="IBUITableViewCellStyleDefault" id="hd2-gv-vnA">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hd2-gv-vnA" id="3cb-kA-Wv5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1sT-Bf-T7g">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qfm-ia-Edb" id="j3x-5z-j3d"/>
+                            <outlet property="delegate" destination="qfm-ia-Edb" id="psy-3t-D0b"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CPY-7N-Ccz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="474"/>
         </scene>
         <!--User Info View Controller-->
         <scene sceneID="SOY-Bo-vfm">
@@ -328,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWE-f7-C0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="379" y="485"/>
+            <point key="canvasLocation" x="1191" y="461"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rib-xE-97b">
@@ -450,7 +499,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UfL-En-GCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="386" y="1285"/>
+            <point key="canvasLocation" x="1206" y="1229"/>
         </scene>
     </scenes>
     <resources>

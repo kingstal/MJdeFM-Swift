@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 如果已经登录，从文件中读取保存的登录信息
         MJUserInfoManager.sharedManager.userInfo = MJUserInfoManager.sharedManager.unarchiverUserInfo()
 
+        MJChannelManager.sharedManager.updateChannels()
         return true
     }
 

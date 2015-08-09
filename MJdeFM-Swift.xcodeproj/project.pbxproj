@@ -29,6 +29,8 @@
 		8EE8121C1B74DFFA00D65BEF /* MJUserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8121B1B74DFFA00D65BEF /* MJUserInfoManager.swift */; };
 		8EE8121E1B74E69A00D65BEF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE8121D1B74E69A00D65BEF /* MediaPlayer.framework */; };
 		8EE812201B74EA7A00D65BEF /* MJChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8121F1B74EA7A00D65BEF /* MJChannelManager.swift */; };
+		8EF0CA2B1B7727E8007E4F0D /* MJChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF0CA2A1B7727E8007E4F0D /* MJChannelViewController.swift */; };
+		8EF0CA311B774047007E4F0D /* BeatAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF0CA301B774047007E4F0D /* BeatAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		8EE8121B1B74DFFA00D65BEF /* MJUserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJUserInfoManager.swift; sourceTree = "<group>"; };
 		8EE8121D1B74E69A00D65BEF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		8EE8121F1B74EA7A00D65BEF /* MJChannelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJChannelManager.swift; sourceTree = "<group>"; };
+		8EF0CA2A1B7727E8007E4F0D /* MJChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJChannelViewController.swift; sourceTree = "<group>"; };
+		8EF0CA301B774047007E4F0D /* BeatAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatAnimator.swift; sourceTree = "<group>"; };
 		AFFE07AD7B3EAC5ECC9EB303 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +180,7 @@
 				8EE8121F1B74EA7A00D65BEF /* MJChannelManager.swift */,
 				8EE812191B74D75300D65BEF /* MJUserInfo.swift */,
 				8EE8121B1B74DFFA00D65BEF /* MJUserInfoManager.swift */,
+				8EF0CA301B774047007E4F0D /* BeatAnimator.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				8EE812131B74C82100D65BEF /* MJPlayerViewController.swift */,
 				8EB06F7E1B76235D00F877A9 /* MJUserInfoViewController.swift */,
 				8EB06F801B762A8200F877A9 /* MJLoginViewController.swift */,
+				8EF0CA2A1B7727E8007E4F0D /* MJChannelViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 				8EE812181B74D53800D65BEF /* MJChannel.swift in Sources */,
 				8EE811DD1B73AB8F00D65BEF /* MJTabBarController.swift in Sources */,
 				8EE812161B74CDBD00D65BEF /* MJSong.swift in Sources */,
+				8EF0CA2B1B7727E8007E4F0D /* MJChannelViewController.swift in Sources */,
 				8EE812081B73AD1200D65BEF /* ContextMenuCell.m in Sources */,
 				8EC748CB1B75D8B600015E5E /* MJFetcher.swift in Sources */,
 				8EE812141B74C82100D65BEF /* MJPlayerViewController.swift in Sources */,
@@ -415,6 +422,7 @@
 				8EE8121C1B74DFFA00D65BEF /* MJUserInfoManager.swift in Sources */,
 				8EE811DB1B73AB8F00D65BEF /* AppDelegate.swift in Sources */,
 				8EE8121A1B74D75300D65BEF /* MJUserInfo.swift in Sources */,
+				8EF0CA311B774047007E4F0D /* BeatAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
