@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation:UIStatusBarAnimation.None)
+        
+        //远程控制
+        UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
+        self.becomeFirstResponder()
+        
+        // 如果已经登录，从文件中读取保存的登录信息
+        MJUserInfoManager.sharedManager.userInfo = MJUserInfoManager.sharedManager.unarchiverUserInfo()
+
         return true
     }
 

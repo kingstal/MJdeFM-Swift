@@ -17,3 +17,10 @@ extension UIImage
         return posterImage
     }
 }
+
+extension NSString
+{
+    class func getDocumentPath() -> String {
+    return  NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+    }
+}

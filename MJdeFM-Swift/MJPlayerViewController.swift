@@ -15,7 +15,7 @@ class MJPlayerViewController : UIViewController
 {
     @IBOutlet weak var channelTitle: UILabel!
     @IBOutlet weak var picture: UIImageView!
-    @IBOutlet weak var pictureBlock: UIImageView!
+    @IBOutlet weak var pictureBlock: UIButton!
     @IBOutlet weak var timerProgressBar: UIProgressView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var songTitle: UILabel!
@@ -89,10 +89,7 @@ class MJPlayerViewController : UIViewController
         picture.layer.cornerRadius = picture.bounds.size.width / 2.0
         picture.layer.masksToBounds = true
         
-        pictureBlock.image = UIImage(named: "albumBlock")
-        pictureBlock.userInteractionEnabled = true
-        let singleTapGesture = UIGestureRecognizer(target: self, action: "pauseBtnTapped:")
-        pictureBlock.addGestureRecognizer(singleTapGesture)
+        pictureBlock.setBackgroundImage(UIImage(named: "albumBlock"), forState: UIControlState.Normal)
         
         timer = NSTimer.scheduledTimerWithTimeInterval(0.02, target: self, selector: "updateProgress", userInfo: nil, repeats: true)
         
@@ -161,16 +158,17 @@ class MJPlayerViewController : UIViewController
     // MARK: IBAction
     
     @IBAction func pauseBtnTapped() {
+        println("---")
         if (isPlaying) {
             player.pause()
             picture.alpha = 0.2
-            pictureBlock.image = UIImage(named: "albumBlock2")
+            pictureBlock.setBackgroundImage(UIImage(named: "albumBlock2"), forState: UIControlState.Normal)
             pauseBtn.setBackgroundImage(UIImage(named: "play"), forState: UIControlState.Normal)
             timer.fireDate = NSDate.distantFuture() as! NSDate
         } else {
             player.play()
             picture.alpha = 1.0
-            pictureBlock.image = UIImage(named: "albumBlock")
+            pictureBlock.setBackgroundImage(UIImage(named: "albumBlock"), forState: UIControlState.Normal)
             pauseBtn.setBackgroundImage(UIImage(named: "pause"), forState: UIControlState.Normal)
             timer.fireDate = NSDate()
         }
@@ -185,7 +183,7 @@ class MJPlayerViewController : UIViewController
             player.play()
             isPlaying = true
             picture.alpha = 1.0
-            pictureBlock.image = UIImage(named: "albumBlock")
+            pictureBlock.setBackgroundImage(UIImage(named: "albumBlock"), forState: UIControlState.Normal)
             pauseBtn.setBackgroundImage(UIImage(named: "pause"), forState: UIControlState.Normal)
         }
         self.loadPlayListWithType(MJPlayerViewController.Constants.DELETESONGTYPE)
@@ -196,7 +194,7 @@ class MJPlayerViewController : UIViewController
         player.pause()
         if (!isPlaying) {
             picture.alpha = 1.0
-            pictureBlock.image = UIImage(named: "albumBlock")
+            pictureBlock.setBackgroundImage(UIImage(named: "albumBlock"), forState: UIControlState.Normal)
         }
         self.loadPlayListWithType(MJPlayerViewController.Constants.SKIPSONGTYPE)
     }

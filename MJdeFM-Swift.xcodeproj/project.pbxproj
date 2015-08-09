@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0B0AB0CFC7214CB3BA72E8F4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5865BF537B1AC00FC9A57197 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8EB06F7F1B76235D00F877A9 /* MJUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB06F7E1B76235D00F877A9 /* MJUserInfoViewController.swift */; };
+		8EB06F811B762A8200F877A9 /* MJLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB06F801B762A8200F877A9 /* MJLoginViewController.swift */; };
 		8EC748CB1B75D8B600015E5E /* MJFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC748CA1B75D8B600015E5E /* MJFetcher.swift */; };
-		8EC748CE1B76046A00015E5E /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC748CD1B76046A00015E5E /* UIImageExtension.swift */; };
+		8EC748CE1B76046A00015E5E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC748CD1B76046A00015E5E /* Extension.swift */; };
 		8EE811DB1B73AB8F00D65BEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE811DA1B73AB8F00D65BEF /* AppDelegate.swift */; };
 		8EE811DD1B73AB8F00D65BEF /* MJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE811DC1B73AB8F00D65BEF /* MJTabBarController.swift */; };
 		8EE811E01B73AB8F00D65BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE811DE1B73AB8F00D65BEF /* Main.storyboard */; };
@@ -42,8 +44,10 @@
 /* Begin PBXFileReference section */
 		5865BF537B1AC00FC9A57197 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAB308FF38BA7D5FBF42395 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8EB06F7E1B76235D00F877A9 /* MJUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJUserInfoViewController.swift; sourceTree = "<group>"; };
+		8EB06F801B762A8200F877A9 /* MJLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJLoginViewController.swift; sourceTree = "<group>"; };
 		8EC748CA1B75D8B600015E5E /* MJFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJFetcher.swift; sourceTree = "<group>"; };
-		8EC748CD1B76046A00015E5E /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		8EC748CD1B76046A00015E5E /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		8EE811D51B73AB8F00D65BEF /* MJdeFM-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MJdeFM-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE811D91B73AB8F00D65BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EE811DA1B73AB8F00D65BEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +100,7 @@
 		8EC748CC1B76044B00015E5E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				8EC748CD1B76046A00015E5E /* UIImageExtension.swift */,
+				8EC748CD1B76046A00015E5E /* Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -190,6 +194,8 @@
 			children = (
 				8EE811DC1B73AB8F00D65BEF /* MJTabBarController.swift */,
 				8EE812131B74C82100D65BEF /* MJPlayerViewController.swift */,
+				8EB06F7E1B76235D00F877A9 /* MJUserInfoViewController.swift */,
+				8EB06F801B762A8200F877A9 /* MJLoginViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -395,7 +401,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EE8120B1B73AD1200D65BEF /* YALContextMenuTableView.m in Sources */,
+				8EB06F811B762A8200F877A9 /* MJLoginViewController.swift in Sources */,
 				8EE8120A1B73AD1200D65BEF /* UIView+YALConstraints.m in Sources */,
+				8EB06F7F1B76235D00F877A9 /* MJUserInfoViewController.swift in Sources */,
 				8EE812181B74D53800D65BEF /* MJChannel.swift in Sources */,
 				8EE811DD1B73AB8F00D65BEF /* MJTabBarController.swift in Sources */,
 				8EE812161B74CDBD00D65BEF /* MJSong.swift in Sources */,
@@ -403,7 +411,7 @@
 				8EC748CB1B75D8B600015E5E /* MJFetcher.swift in Sources */,
 				8EE812141B74C82100D65BEF /* MJPlayerViewController.swift in Sources */,
 				8EE812201B74EA7A00D65BEF /* MJChannelManager.swift in Sources */,
-				8EC748CE1B76046A00015E5E /* UIImageExtension.swift in Sources */,
+				8EC748CE1B76046A00015E5E /* Extension.swift in Sources */,
 				8EE8121C1B74DFFA00D65BEF /* MJUserInfoManager.swift in Sources */,
 				8EE811DB1B73AB8F00D65BEF /* AppDelegate.swift in Sources */,
 				8EE8121A1B74D75300D65BEF /* MJUserInfo.swift in Sources */,

@@ -64,4 +64,71 @@ class MJFetcher
                 }
         }
     }
+
+    func fetchCaptchaImageURL(successCompletion : MJFetcherSuccessBlock, errorCompletion : MJFetcherErrorBlock)
+    {
+        Alamofire.request(.GET, MJFetcher.Constants.CAPTCHAIDURLSTRING)
+            .responseString { _, _, data, error in
+                if data != nil
+                {
+                    var captchaID = data!
+                    captchaID = captchaID.stringByReplacingOccurrencesOfString("\"", withString: "")
+                    let captchaImageURL = NSString(format: MJFetcher.Constants.CAPTCHAIMGURLFORMATSTRING, captchaID)
+                    successCompletion(data: [captchaID, captchaImageURL])
+                }else if error != nil{
+                    errorCompletion(error: error!)
+                }
+        }
+    }
+    
+    func loginWithName(name : String, password : String, captcha : String, captchaID : String, rememberOnorOff : String, successCompletion : MJFetcherSuccessBlock, errorCompletion : MJFetcherErrorBlock)
+    {
+        let loginParameters = [
+            "source" : "radio",
+            "alias" : name,
+            "form_password" : password,
+            "captcha_solution" : captcha,
+            "captcha_id" : captchaID,
+            "remember" : rememberOnorOff
+        ]
+        
+        Alamofire.request(.POST, MJFetcher.Constants.LOGINURLSTRING, parameters: loginParameters)
+            .responseJSON { _, _, json, error in
+                if json != nil{
+                    let userDict = JSON(json!)
+                    let userInfoDict = userDict["user_info"]
+                    let playRecordDict = userInfoDict["play_record"]
+                    let login = userDict["r"].stringValue
+                    let cookies = userInfoDict["ck"].stringValue
+                    let userID = userInfoDict["uid"].stringValue
+                    let name = userInfoDict["name"].stringValue
+                    let banned = playRecordDict["banned"].stringValue
+                    let liked = playRecordDict["liked"].stringValue
+                    let played = playRecordDict["played"].stringValue
+                    let userInfo = MJUserInfo(login: login, cookies: cookies, userID: userID, name: name, banned: banned, liked: liked, played: played)
+                    successCompletion(data: userInfo)
+                }else if error != nil{
+                    errorCompletion(error: error!)
+                }
+        }
+    }
+
+    func logoutUser(user : MJUserInfo, successCompletion : MJFetcherSuccessBlock, errorCompletion : MJFetcherErrorBlock)
+    {
+        let logoutParameters = [
+            "source" : "radio",
+            "ck" : user.cookies,
+            "no_login" : "y"
+        ]
+
+        Alamofire.request(.GET, MJFetcher.Constants.LOGOUTURLSTRING, parameters : logoutParameters)
+            .responseString { _, _, data, error in
+                if data != nil
+                {
+                    successCompletion(data: data!)
+                }else if error != nil{
+                    errorCompletion(error: error!)
+                }
+        }
+    }
 }

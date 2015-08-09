@@ -17,6 +17,18 @@ class MJUserInfo : NSObject, NSCoding{
     let liked :String
     let played :String
     
+    override init()
+    {
+        self.login = ""
+        self.cookies = ""
+        self.userID = ""
+        self.name = ""
+        self.banned = ""
+        self.liked = ""
+        self.played = ""
+        super.init()
+    }
+    
     init(login : String,
         cookies : String,
         userID : String,

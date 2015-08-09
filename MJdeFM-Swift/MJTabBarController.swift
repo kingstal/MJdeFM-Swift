@@ -23,16 +23,13 @@ YALContextMenuTableViewDelegate{
         self.initiateMenuOptions()
         self.initButton()
         
-        let v1 = UIViewController()
-        v1.view.backgroundColor = UIColor.redColor()
         let v2 = UIViewController()
         v2.view.backgroundColor = UIColor.greenColor()
-        let v3 = UIViewController()
-        v3.view.backgroundColor = UIColor.blueColor()
         
         let playerVC: AnyObject! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MJPlayerViewController")
+        let userInfoVC: AnyObject! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MJUserInfoViewController")
         
-        self.viewControllers = [playerVC,v2,v3]
+        self.viewControllers = [playerVC,v2,userInfoVC]
     }
     
     override func viewWillAppear(animated: Bool) {

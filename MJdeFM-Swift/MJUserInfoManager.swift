@@ -25,13 +25,22 @@ class MJUserInfoManager
     
     func archiverUserInfo()
     {
-        let file = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.UserDirectory, NSSearchPathDomainMask.UserDomainMask, true).first?.stringByAppendingPathComponent("userInfo.data")
-        NSKeyedArchiver.archiveRootObject(userInfo!, toFile: file!)
+        var filePath = NSString.getDocumentPath()
+        filePath = filePath.stringByAppendingPathComponent("userInfo.data")
+        NSKeyedArchiver.archiveRootObject(userInfo!, toFile: filePath)
     }
     
     func unarchiverUserInfo() -> MJUserInfo
     {
-        let file = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.UserDirectory, NSSearchPathDomainMask.UserDomainMask, true).first?.stringByAppendingPathComponent("userInfo.data")
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(file!) as! MJUserInfo
+        var filePath = NSString.getDocumentPath()
+        filePath = filePath.stringByAppendingPathComponent("userInfo.data")
+        let userInfo = NSKeyedUnarchiver.unarchiveObjectWithFile(filePath) as? MJUserInfo
+        if userInfo != nil
+        {
+            return userInfo!
+        }else
+        {
+            return MJUserInfo()
+        }
     }
 }
